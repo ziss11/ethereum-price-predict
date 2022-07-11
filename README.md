@@ -8,4 +8,7 @@ Airbnb merupakan penginapan rumahan yang memungkinkan pengguna mendaftrkan atau 
 
 Berdasarkan permasalahan yang telah di jelaskan di atas, proyek akan akan di bangun merupakan model Machine Learning yang dapat digunakan untuk menentukan harga awal sewa atau memprediksi harga pasar yang pas untuk kamar yang mereka sewakan, sehingga dapat meminimalisir kerugian diwaktu yang akan datang. Demikian latar belakang dari proyek Machine Learning ini, diharapkan implementasi dari proyek ini dapat dikembangkan menjadi lebih baik lagi.
 
+Referensi:
+- [Airbnb Price Prediction](https://medium.datadriveninvestor.com/making-models-airbnb-price-prediction-data-analysis-15b9af87c9d8)
+- [Average Airbnb Prices By City](https://www.alltherooms.com/analytics/average-airbnb-prices-by-city/)
 
