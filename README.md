@@ -1,4 +1,4 @@
-# **Laporan Proyek Machine Learning - Abdul Azis**
+b# **Laporan Proyek Machine Learning - Abdul Azis**
 ## **Domain Proyek**
 ### **Latar Belakang** 
 Selama bertahun-tahun prediksi harga pasar telah menarik dan menantang investor serta peneliti, karena banyak ketidakpastian
@@ -73,22 +73,35 @@ Setelah dilakukan analisa pada data, didapatkan informasi bahwa:
 
 Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada data untuk mengetahui keadaan pada data seperti korelasi antar fitur dan _outlier_ pada data. Berikut visualisasi data yang menunjukkan korelasi atar fitur dan _outlier_ pada data:
 
-* Menangani _Oulier_
->>Jika dilihat divisualisasi _outlier_ dibawah hampir semua data numeric memiliki data _outlier_. Terdapat beberapa teknik untuk mengatasi _outlier_ pada data. Pada proyek ini akan menerapkan teknik _IQR Method_ yaitu dengan menghapus data yang berada diluar _interquartile range_. Interquartile merupakan range diantara kuartil pertama(25%) dan kuartil ketiga(75%).
+* Menangani _Oulier_</br>
+Jika dilihat divisualisasi _outlier_ dibawah hampir semua data numeric memiliki data _outlier_. Terdapat beberapa teknik untuk mengatasi _outlier_ pada data. Pada proyek ini akan menerapkan teknik _IQR Method_ yaitu dengan menghapus data yang berada diluar _interquartile range_. Interquartile merupakan range diantara kuartil pertama(25%) dan kuartil ketiga(75%).
 <image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/outlier%20visualization.png' style='background-color: #FFFFFF;' width= 500/>
 
-* Univariate Analysis
->>Karena target prediksi dari dataset ini ada pada fitur Close_Price yang merupakan harga crypto coin Ethereum, jadi hanya fokus menganalisis korelasi data pada feature tersebut. Dari hasil visualisasi data dibawah dapat disimpulkan bahwa peningkatan harga crypto coin ethereum sebanding dengan penurunan jumlah sampel data.
+* Univariate Analysis</br>
+Karena target prediksi dari dataset ini ada pada fitur Close_Price yang merupakan harga crypto coin Ethereum, jadi hanya fokus menganalisis korelasi data pada feature tersebut. Dari hasil visualisasi data dibawah dapat disimpulkan bahwa peningkatan harga crypto coin ethereum sebanding dengan penurunan jumlah sampel data.
 <image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/univariate%20analysis.png' style='background-color: #FFFFFF;' width=500/>
 
-* Multivariate Analysis
->>Jika di lihat dari visualisasi data dibawah. Fitur Close pada sumbu y memiliki korelasi dengan data pada fitur High, Low, Open, dan Marketcap. Korelasi yang terdapat pada data-data tersebut merupakan korelas yang tinggi, sedangkan untuk fitur Volume terlihat memiliki korelasi yang cukup lemah karena sebaran datanya tidak membentuk pola.
+* Multivariate Analysis</br>
+Jika di lihat dari visualisasi data dibawah. Fitur Close pada sumbu y memiliki korelasi dengan data pada fitur High, Low, Open, dan Marketcap. Korelasi yang terdapat pada data-data tersebut merupakan korelas yang tinggi, sedangkan untuk fitur Volume terlihat memiliki korelasi yang cukup lemah karena sebaran datanya tidak membentuk pola.
 <image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/multivariate%20analisis.png' style='background-color: #FFFFFF;' width=500/>
+Untuk lebih jelasnya dapat dilihat melalui visualisasi dibawah yang menunjukkan skor korelasi di tiap fitur dengan fitur Close. Pada fitur High, Low, Open dan Marketcap memiliki skor korelasi yang terbilang tinggi yaitu di atas 0.9. Sedangkan pada fitur Volume memiliki skor korelasi yang cukup rendah yaitu 0.38. Sehingga fitur Volume ini dapat didrop dari dataset.
+<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/matrix%20correlation.png' style='background-color: #FFFFFF;' width=500/>
 
->>Untuk lebih jelasnya dapat dilihat melalui visualisasi dibawah yang menunjukkan skor korelasi di tiap fitur dengan fitur Close. Pada fitur High, Low, Open dan Marketcap memiliki skor korelasi yang terbilang tinggi yaitu di atas 0.9. Sedangkan pada fitur Volume memiliki skor korelasi yang cukup rendah yaitu 0.38. Sehingga fitur Volume ini dapat didrop dari dataset.
+## **Data Preparation**
+Berikut merupakan tahapan dalam mempersiapkan data untuk keperluan pelatihan model:
+### **Menghapus data yang tidak diperlukan dan merubah nama column**
+Kolom data seperti (_SNo, Name, Symbol, Date_) tidak diperlukan untuk pelatihan, karena data tersebut akan mengganggu model dalam mempelajari data. Karena isi dari data tersebut tidak memiliki value yang berarti untuk dipelajari oleh model. Lalu, mengubah nama kolom _High, Low, Open, Close_ menjadi nama kolom yang dapat lebih dipahami menjadi seperti berikut:
+|  From  |      To     |
+| ------ | ----------- |
+| High   | High_Price  |
+| Low    | Low_Price   |
+| Open   | Open_Price  |
+| Close  | Close_Price |
+### **Split dataset**
+Membagi dataset menjadi data latih (_train_) dan data uji (_test_) merupakan hal yang harus kita lakukan sebelum membuat model.Data latih adalah sekumpulan data yang akan digunakan oleh model untuk melakukan pelatihan. Sedangkan, data uji adalah sekumpulan data yang akan digunakan untuk memvalidasi kinerja pada model yang telah dilatih. Karena data uji berperan sebagai data baru yang belum pernah dilihat oleh model, maka cara ini efektif untuk memeriksa performa model setelah proses pelatihan dilakukan. Proporsi pembagian dataset pada proyek ini menggunakan proporsi pembagian 80:20 yang berarti sebanyak 80% merupakan data latih dan 20% persen merupakan data uji.
+### **Normalisasi data**
+Melakukan transformasi pada data fitur fitur yang akan dipelajari oleh model menggunakan _library_ _MinMaxScaler_. _MinMaxScaler_ mentransformasikan fitur dengan menskalakan setiap fitur ke rentang tertentu. _Library_ ini menskalakan dan mentransformasikan setiap fitur secara individual sehingga berada dalam rentang yang diberikan pada set pelatihan, pada _library_ ini memiliki range default antara 0 dan 1. Dengan merenapkan teknik normalisasi data, model akan dengan lebih mudah mengenali pola-pola yang terdapat pada data sehingga akan menghasilkan prediksi yang lebih baik daripada tidak menggunakan teknik normalisasi.
 
->><image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/matrix%20correlation.png' style='background-color: #FFFFFF;' width=500/>
-
-
-
+## **Modeling**
+Algoritma _machine learning_ yang digunakan pada proyek ini yaitu Support _Vector Machine, K-Nearest Neighbours, Random Forest_.
 
