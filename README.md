@@ -45,6 +45,6 @@ Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
     * K-Nearest Neighbours
     * Random Forest
 
-* Menerapkan teknik Grid Search untuk mendapatkan parameter-parameter terbaik pada masing-masing model.
+* Menerapkan teknik Grid Search untuk mendapatkan parameter-parameter dengan performa terbaik pada masing-masing model.
 
 
