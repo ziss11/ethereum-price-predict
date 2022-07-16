@@ -1,14 +1,49 @@
 # Laporan Proyek Machine Learning - Abdul Azis
 
 ## Domain Proyek
-Pada proyek Machine Learning kali ini saya memilih judul proyek "Airbnb Price Analytics".
-
 ### Latar Belakang 
-Airbnb merupakan penginapan rumahan yang memungkinkan pengguna mendaftrkan atau menyewakan properti mereka untuk digunakan dalam jangka pendek, untuk harga sewanya ditentukan oleh pemilik properti. Dengan menggunakan jasa Airbnb ini biasanya para traveler akan lebih memilih untuk menyewa kamar dari layanan Airbnb ini. Salah satu alasan para traveler memilih jasa Airbnb saat traveling yaitu selain harganya yang lebih murah, Airbnb juga lebih fleksibel dan terdapat beberapa fasilitas seperti dapur layaknya sebuah rumah pribadi. Karena itu, tidak sedikit pihak yang akan menggunakan jasa Airbnb ini untuk menyewakan properti mereka. Tetapi untuk yang baru memulai menyewakan properti mereka di air bnb mungkin akan kebingungan untuk menentukan harga dari kamar yang mereka sewakan. Jika mereka salah dalam menentukan harga sewa pada kamar yang disewakan akan sangat berdampak pada pendapatan mereka, jika harga sewa terlalu murah tentu mereka kan mengalami kerugian, tetapi apabila terlalu mahal maka akan sedikit orang yang akan memilik jasa sewa tersebut atau mungkin yang paling parahnya tidak ada yang akan menggunakan jasa tersebut.
+Selama bertahun-tahun prediksi harga pasar telah menarik dan menantang investor serta peneliti, karena banyak ketidakpastian
+yang terlibat dan banyak variabel yang mempengaruhi pasar. Beberapa tahun terakhir, pasar tidak hanya tentang saham tetapi juga mata uang digital atau cryptocurrency. Cryptocurrency merupakan mata uang digital yang transaksinya dapat dilakukan menggunakan jaringan internet.
 
-Berdasarkan permasalahan yang telah di jelaskan di atas, proyek akan akan di bangun merupakan model Machine Learning yang dapat digunakan untuk menentukan harga awal sewa atau memprediksi harga pasar yang pas untuk kamar yang mereka sewakan di sekitar New York City, sehingga dapat meminimalisir kerugian diwaktu yang akan datang. Demikian latar belakang dari proyek Machine Learning ini, diharapkan implementasi dari proyek ini dapat dikembangkan menjadi lebih baik lagi.
+Saat ini telah banyak jenis mata uang kripto dan salah satu yang sedang terkenal saat ini adalah Ethereum. Ethereum adalah token Aset Kripto yang mirip dengan bitcoin karena dapat digunakan dalam transaksi peer-to-peer, atau dibeli dan dijual di bursa dengan nilai spekulatif. Ethereum dan pasar cryptocurrency lainnya dapat diperdagangkan setiap saat karena tidak memiliki periode tutup, inilah yang membedakannya dengan pasar lainnya. Ethereum lebih mudah berubah dan berisiko bagi para pedagang. Faktor ketidakpastian yang ada, perlu dikurangi oleh para pedagang untuk meminimalkan risiko. Salah satu cara yang digunakan untuk melakukan hal tersebut adalah prediksi harga Ethereum secara akurat.
+
+Saat melakukan prediksi, di perlukan metode yang tepat. Salah satunya adalah dengan menerapkan machine learning. Machine Learning adalah cabang dari kecerdasan buatan (AI) dan ilmu komputer yang berfokus pada penggunaan data dan algoritma untuk meniru cara manusia belajar. Penerapan machine learning membantu dalam proses analisis data besar dan kompleks, sehingga tugas bisa diselesaikan dengan cepat.
+
+Berdasarkan hal tersebut, maka dilakukan penelitian tentang prediksi harga Ethereum menggunakan machine learning. Proyek machine learning ini di buat agar dapat memprediksi harga pasar Ethereum di masa mendatang. Dengan penerapan machine learning di harapkan dapat mengurangi tingkat kerugian akibat harga mata uang Ethereum yang tidak stabil.
 
 Referensi:
-- [Airbnb Price Prediction](https://medium.datadriveninvestor.com/making-models-airbnb-price-prediction-data-analysis-15b9af87c9d8)
-- [Average Airbnb Prices By City](https://www.alltherooms.com/analytics/average-airbnb-prices-by-city/)
+- [Prediksi Harga Cryptocurrency dengan metode K-Nearest Neighbours](http://ejournal.nusamandiri.ac.id/index.php/pilar/article/view/30)
+
+## Business Understanding
+### Problem Statement
+Berdasarkan pada latar belakang di atas, permasalahan yang dapat diselesaikan pada proyek ini adalah sebagai berikut:
+
+* Bagaimana cara menganalisa data harga mata uang Kripto?
+* Bagaimana cara memproses data harga mata uang Ethereum sehingga dapat di latih dengan baik oleh model?
+* Bagaimana cara membangun model machine learning yang dapat memprediksi harga dengan baik?
+
+### Goals
+Tujuan dibuatnya proyek ini adalah sebagai berikut:
+
+* Mendapatkan analisa yang cukup untuk memahami data Harga mata uang kripto.
+* Melakukan persiapan pada data agar dapat dengan mudah di mengerti oleh model.
+* Membuat model machine learning yang dapat memahami pola pada data dengan baik.
+* Dapat memprediksi harga dengan akurat.
+
+### Solution Statement
+Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
+
+* Melakukan analisa pada data untuk dapat memahami data yang ada dengan menerapkan teknik visualisasi data. Analisa yang dapat dilakukan yaitu, antara lain:
+    * Menangani missing value (data yang hilang) pada data.
+    * Memeriksa korelasi antar data penting untuk memahami hubungan data target dan data fitur.
+
+* Melakukan pemrosesan pada data seperti:
+    * Mengatasi outlier pada data dengan menerapkan IQR method.
+    * Normalisasi data pada fitur numerik.
+
+* Membangun model regresi yang dapat memprediksi bilangan kontinu sesuai dengan permasalahan yang ingin di selesaikan. Beberapa algoritma yang akan digunakan pada model regresi proyek ini yaitu, sebagai berikut:
+    * Support Vector Machine
+    * K-Nearest Neighbours
+    * Random Forest
+
 
