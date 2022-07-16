@@ -1,27 +1,27 @@
-# Laporan Proyek Machine Learning - Abdul Azis
-## Domain Proyek
-### Latar Belakang 
+# **Laporan Proyek Machine Learning - Abdul Azis**
+## **Domain Proyek**
+### **Latar Belakang** 
 Selama bertahun-tahun prediksi harga pasar telah menarik dan menantang investor serta peneliti, karena banyak ketidakpastian
-yang terlibat dan banyak variabel yang mempengaruhi pasar. Beberapa tahun terakhir, pasar tidak hanya tentang saham tetapi juga mata uang digital atau cryptocurrency. Cryptocurrency merupakan mata uang digital yang transaksinya dapat dilakukan menggunakan jaringan internet.
+yang terlibat dan banyak variabel yang mempengaruhi pasar. Beberapa tahun terakhir, pasar tidak hanya tentang saham tetapi juga mata uang digital atau _cryptocurrency_. _Cryptocurrency_ merupakan mata uang digital yang transaksinya dapat dilakukan menggunakan jaringan internet.
 
-Saat ini telah banyak jenis mata uang kripto dan salah satu yang sedang terkenal saat ini adalah Ethereum. Ethereum adalah token Aset Kripto yang mirip dengan bitcoin karena dapat digunakan dalam transaksi peer-to-peer, atau dibeli dan dijual di bursa dengan nilai spekulatif. Ethereum dan pasar cryptocurrency lainnya dapat diperdagangkan setiap saat karena tidak memiliki periode tutup, inilah yang membedakannya dengan pasar lainnya. Ethereum lebih mudah berubah dan berisiko bagi para pedagang. Faktor ketidakpastian yang ada, perlu dikurangi oleh para pedagang untuk meminimalkan risiko. Salah satu cara yang digunakan untuk melakukan hal tersebut adalah prediksi harga Ethereum secara akurat.
+Saat ini telah banyak jenis mata uang kripto dan salah satu yang sedang terkenal saat ini adalah _Ethereum_. _Ethereum_ adalah token Aset Kripto yang mirip dengan _bitcoin_ karena dapat digunakan dalam transaksi peer-to-peer, atau dibeli dan dijual di bursa dengan nilai spekulatif. _Ethereum_ dan pasar _cryptocurrency_ lainnya dapat diperdagangkan setiap saat karena tidak memiliki periode tutup, inilah yang membedakannya dengan pasar lainnya. _Ethereum_ lebih mudah berubah dan berisiko bagi para pedagang. Faktor ketidakpastian yang ada, perlu dikurangi oleh para pedagang untuk meminimalkan risiko. Salah satu cara yang digunakan untuk melakukan hal tersebut adalah prediksi harga _Ethereum_ secara akurat.
 
 Saat melakukan prediksi, di perlukan metode yang tepat. Salah satunya adalah dengan menerapkan machine learning. Machine Learning adalah cabang dari kecerdasan buatan (AI) dan ilmu komputer yang berfokus pada penggunaan data dan algoritma untuk meniru cara manusia belajar. Penerapan machine learning membantu dalam proses analisis data besar dan kompleks, sehingga tugas bisa diselesaikan dengan cepat.
 
-Berdasarkan hal tersebut, maka dilakukan penelitian tentang prediksi harga Ethereum menggunakan machine learning. Proyek machine learning ini di buat agar dapat memprediksi harga pasar Ethereum di masa mendatang. Dengan penerapan machine learning di harapkan dapat mengurangi tingkat kerugian akibat harga mata uang Ethereum yang tidak stabil.
+Berdasarkan hal tersebut, maka dilakukan penelitian tentang prediksi harga _Ethereum_ menggunakan machine learning. Proyek machine learning ini di buat agar dapat memprediksi harga pasar _Ethereum_ di masa mendatang. Dengan penerapan machine learning di harapkan dapat mengurangi tingkat kerugian akibat harga mata uang _Ethereum_ yang tidak stabil.
 
 Referensi:
 - [Prediksi Harga Cryptocurrency dengan metode K-Nearest Neighbours](http://ejournal.nusamandiri.ac.id/index.php/pilar/article/view/30)
 
-## Business Understanding
-### Problem Statement
+## **Business Understanding**
+### **Problem Statement**
 Berdasarkan pada latar belakang di atas, permasalahan yang dapat diselesaikan pada proyek ini adalah sebagai berikut:
 
 * Bagaimana cara menganalisa data harga mata uang Kripto?
 * Bagaimana cara memproses data harga mata uang Ethereum sehingga dapat di latih dengan baik oleh model?
 * Bagaimana cara membangun model machine learning yang dapat memprediksi harga dengan baik?
 
-### Goals
+### **Goals**
 Tujuan dibuatnya proyek ini adalah sebagai berikut:
 
 * Mendapatkan analisa yang cukup untuk memahami data Harga mata uang kripto.
@@ -29,11 +29,11 @@ Tujuan dibuatnya proyek ini adalah sebagai berikut:
 * Membuat model machine learning yang dapat memahami pola pada data dengan baik.
 * Dapat memprediksi harga dengan akurat.
 
-### Solution Statement
+### **Solution Statement**
 Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
 
 * Melakukan analisa pada data untuk dapat memahami data yang ada dengan menerapkan teknik visualisasi data. Analisa yang dapat dilakukan yaitu, antara lain:
-    * Menangani missing value (data yang hilang) pada data.
+    * Menangani _missing value_ (data yang hilang) pada data.
     * Memeriksa korelasi antar data penting untuk memahami hubungan data target dan data fitur.
 
 * Melakukan pemrosesan pada data seperti:
@@ -46,5 +46,34 @@ Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
     * Random Forest
 
 * Menerapkan teknik Grid Search untuk mendapatkan parameter-parameter dengan performa terbaik pada masing-masing model.
+
+## **Data Understanding**
+Dataset yang di gunakan pada proyek machine learning ini merupakan dataset riwayat harga mata uang Ethereum dari waktu ke waktu. Dataset tersebut dapat di unduh di website kaggle: [Cryptocurrency Historical Prices](https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory?select=coin_Ethereum.csv).
+
+Setelah dilakukan analisa pada data, didapatkan informasi bahwa:
+
+* Format dataset yaitu CSV (Comma-Seperated Values)
+* Jumlah kolom data yang terdapat didalam dataset berjumla 10 kolom, antara lain: _SNo, Name, Symbol, Date, High, Low, Open, Close, Volume, Marketcap_.
+* Terdapat 2161 jumlah sample yang terdapat didalam dataset.
+* Terdapat 6 kolom data yang memiliki tipe data Float yaitu (_High, Low, Open, Close, Volume, Marketcap_), 
+* Terdapat 1 kolom data yang memiliki tipe data Integer yaitu (_SNo_)
+* Terdapat 2 kolom data yang memiliki tipe data Object atau String yaitu (_Name, Symbol_)
+* Tidak terdapat _missing value_ pada dataset
+### **Variabel-variabel pada dataset adalah sebagai berikut:**
+
+* Name: Nama mata uang kripto
+* Symbol: Simbol mata uang kripto
+* Date: Tanggal pencatatan data
+* High : Harga tertinggi pada hari tertentu
+* Low : Harga terendah pada hari tertentu
+* Open : Harga pembukaan pada hari tertentu
+* Close : Harga penutupan pada hari tertentu
+* Volume : Volume transaksi pada hari tertentu
+* Mastercap : Kapitalisasi pasar dalam USD
+
+Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada data untuk mengetahui keadaan pada data seperti korelasi antar fitur dan _outlier_ pada data. Berikut visualisasi data yang menunjukkan korelasi atar fitur dan outlier pada data:
+
+* Mengidentifikasi Oulier
+<image src='https://raw.githubusercontent.com/AzharRizky/Predictive-Anlaytics/main/images/distribusi_data(right-skewed).png' width= 500/>
 
 
