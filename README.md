@@ -1,5 +1,4 @@
 # Laporan Proyek Machine Learning - Abdul Azis
-
 ## Domain Proyek
 ### Latar Belakang 
 Selama bertahun-tahun prediksi harga pasar telah menarik dan menantang investor serta peneliti, karena banyak ketidakpastian
@@ -45,5 +44,7 @@ Solusi yang dapat diterapkan agar goals diatas terpenuhi adalah sebagai berikut:
     * Support Vector Machine
     * K-Nearest Neighbours
     * Random Forest
+
+* Menerapkan teknik Grid Search untuk mendapatkan parameter-parameter terbaik pada masing-masing model.
 
 
