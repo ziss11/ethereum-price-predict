@@ -74,18 +74,18 @@ Setelah dilakukan analisa pada data, didapatkan informasi bahwa:
 Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada data untuk mengetahui keadaan pada data seperti korelasi antar fitur dan _outlier_ pada data. Berikut visualisasi data yang menunjukkan korelasi atar fitur dan _outlier_ pada data:
 
 * Menangani _Oulier_</br>
-Jika dilihat divisualisasi _outlier_ dibawah hampir semua data numeric memiliki data _outlier_. Terdapat beberapa teknik untuk mengatasi _outlier_ pada data. Pada proyek ini akan menerapkan teknik _IQR Method_ yaitu dengan menghapus data yang berada diluar _interquartile range_. Interquartile merupakan range diantara kuartil pertama(25%) dan kuartil ketiga(75%).
-<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/outlier%20visualization.png' style='background-color: #FFFFFF;' width= 500/>
+  Jika dilihat divisualisasi _outlier_ dibawah hampir semua data numeric memiliki data _outlier_. Terdapat beberapa teknik untuk mengatasi _outlier_ pada data. Pada proyek ini akan menerapkan teknik _IQR Method_ yaitu dengan menghapus data yang berada diluar _interquartile range_. Interquartile merupakan range diantara kuartil pertama(25%) dan kuartil ketiga(75%).
+  <image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/outlier%20visualization.png' style='background-color: #FFFFFF;' width= 500/>
 
 * Univariate Analysis</br>
-Karena target prediksi dari dataset ini ada pada fitur Close_Price yang merupakan harga crypto coin Ethereum, jadi hanya fokus menganalisis korelasi data pada feature tersebut. Dari hasil visualisasi data dibawah dapat disimpulkan bahwa peningkatan harga crypto coin ethereum sebanding dengan penurunan jumlah sampel data.
-<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/univariate%20analysis.png' style='background-color: #FFFFFF;' width=500/>
+  Karena target prediksi dari dataset ini ada pada fitur Close_Price yang merupakan harga crypto coin Ethereum, jadi hanya fokus menganalisis korelasi data pada feature tersebut. Dari hasil visualisasi data dibawah dapat disimpulkan bahwa peningkatan harga crypto coin ethereum sebanding dengan penurunan jumlah sampel data.
+  <image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/univariate%20analysis.png' style='background-color: #FFFFFF;' width=500/>
 
 * Multivariate Analysis</br>
-Jika di lihat dari visualisasi data dibawah. Fitur Close pada sumbu y memiliki korelasi dengan data pada fitur High, Low, Open, dan Marketcap. Korelasi yang terdapat pada data-data tersebut merupakan korelas yang tinggi, sedangkan untuk fitur Volume terlihat memiliki korelasi yang cukup lemah karena sebaran datanya tidak membentuk pola.
-<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/multivariate%20analisis.png' style='background-color: #FFFFFF;' width=500/>
-Untuk lebih jelasnya dapat dilihat melalui visualisasi dibawah yang menunjukkan skor korelasi di tiap fitur dengan fitur Close. Pada fitur High, Low, Open dan Marketcap memiliki skor korelasi yang terbilang tinggi yaitu di atas 0.9. Sedangkan pada fitur Volume memiliki skor korelasi yang cukup rendah yaitu 0.38. Sehingga fitur Volume ini dapat didrop dari dataset.
-<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/matrix%20correlation.png' style='background-color: #FFFFFF;' width=500/>
+  Jika di lihat dari visualisasi data dibawah. Fitur Close pada sumbu y memiliki korelasi dengan data pada fitur High, Low, Open, dan Marketcap. Korelasi yang terdapat pada data-data tersebut merupakan korelas yang tinggi, sedangkan untuk fitur Volume terlihat memiliki korelasi yang cukup lemah karena sebaran datanya tidak membentuk pola.
+  <image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/multivariate%20analisis.png' style='background-color: #FFFFFF;' width=500/>
+  Untuk lebih jelasnya dapat dilihat melalui visualisasi dibawah yang menunjukkan skor korelasi di tiap fitur dengan fitur Close. Pada fitur High, Low, Open dan Marketcap memiliki skor korelasi yang terbilang tinggi yaitu di atas 0.9. Sedangkan pada fitur Volume memiliki skor korelasi yang cukup rendah yaitu 0.38. Sehingga fitur Volume ini dapat didrop dari dataset.
+  <image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/matrix%20correlation.png' style='background-color: #FFFFFF;' width=500/>
 
 ## **Data Preparation**
 Berikut merupakan tahapan dalam mempersiapkan data untuk keperluan pelatihan model:
