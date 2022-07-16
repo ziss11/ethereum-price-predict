@@ -74,6 +74,13 @@ Setelah dilakukan analisa pada data, didapatkan informasi bahwa:
 Sebelum melakukan pemrosesan data untuk pelatihan, perlu dilakukan analisa pada data untuk mengetahui keadaan pada data seperti korelasi antar fitur dan _outlier_ pada data. Berikut visualisasi data yang menunjukkan korelasi atar fitur dan outlier pada data:
 
 * Mengidentifikasi Oulier
-<image src='https://raw.githubusercontent.com/AzharRizky/Predictive-Anlaytics/main/images/distribusi_data(right-skewed).png' width= 500/>
+<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/outlier%20visualization.png' width= 500/>
 
+* Univariate Analysis
+<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/univariate%20analysis.png' width= 500/>
+
+* Multivariate Analysis
+<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/multivariate%20analisis.png' width= 500/>
+
+>>Untuk lebih jelasnya dapat dilihat melalui visualisasi dibawah yang menunjukkan skor korelasi di tiap fitur dengan fitur Close. Pada fitur High, Low, Open dan Marketcap memiliki skor korelasi yang terbilang tinggi yaitu di atas 0.9. Sedangkan pada fitur Volume memiliki skor korelasi yang cukup rendah yaitu 0.38. Sehingga fitur Volume ini dapat didrop dari dataset.
 
