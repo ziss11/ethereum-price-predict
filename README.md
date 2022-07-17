@@ -171,7 +171,7 @@ Pada proyek ini yang menjadi model dengan solusi terbaik adalah _Support Vector 
 ## **Evaluation**
 Pada proyek machine learning ini, metrik evaluasi yang digunakan yaitu _mean squared error (MSE)_ yang mana metrik ini merupakan ukuran seberapa dekat garis pas dengan titik data. Untuk setiap titik data, model mengambil jarak secara vertikal dari titik ke nilai y yang sesuai pada kecocokan kurva (kesalahan), dan kuadratkan nilainya.
 
-<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/rumus%20MSE.Jpg' style='background-color: #FFFFFF;' width=500/>
+<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/rumus%20MSE.jpg' style='background-color: #FFFFFF;' width=500/>
 
 dimana:
 At = Nilai Aktual permintaan
@@ -180,11 +180,11 @@ n = banyaknya data
 
 Setelah melakukan evaluasi menggunakan metrik _mean squared error_ pada model dengan menggunakan data uji didapatkan hasil seperti berikut:
 
-<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/result%20mse.jpg' style='background-color: #FFFFFF;' width=500/></br>
+<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/result%20mse.png' style='background-color: #FFFFFF;' width=500/></br>
 
 Dapat dilihat dari visulisasi diatas bahwa MSE pada model SVR merupakan MSE yang paling rendah dari kedua model lainnya, selain itu jumlah error pada saat pengujian tidak berbeda jauh dengan error pada saat pelatihan.
 
-<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/predict%20visualiztion.png' style='background-color: #FFFFFF;' width=500/></br>
+<image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/predict%20visulization.png' style='background-color: #FFFFFF;' width=500/></br>
 
 Dapat juga dilihat melalui visualisasi diatas bahwa angka prediksi pada model SVR yang paling mendekati dengan angka sebenarnya.
 
