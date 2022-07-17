@@ -108,7 +108,7 @@ Membagi dataset menjadi data latih (_train_) dan data uji (_test_) merupakan hal
 Melakukan transformasi pada data fitur fitur yang akan dipelajari oleh model menggunakan _library_ _MinMaxScaler_. _MinMaxScaler_ mentransformasikan fitur dengan menskalakan setiap fitur ke rentang tertentu. _Library_ ini menskalakan dan mentransformasikan setiap fitur secara individual sehingga berada dalam rentang yang diberikan pada set pelatihan, pada _library_ ini memiliki range default antara 0 dan 1. Dengan merenapkan teknik normalisasi data, model akan dengan lebih mudah mengenali pola-pola yang terdapat pada data sehingga akan menghasilkan prediksi yang lebih baik daripada tidak menggunakan teknik normalisasi.
 
 ## **Modeling**
-Algoritma _machine learning_ yang digunakan pada proyek ini yaitu _Support Vector Machine, K-Nearest Neighbours, Random Forest_.
+Algoritma _machine learning_ yang digunakan pada proyek ini yaitu _Support Vector Regression, K-Nearest Neighbours, Random Forest_.
 ### **Support Vector Regression**
 _Support Vector Regression_ (SVR) menggunakan prinsip yang sama dengan SVM pada kasus klasifikasi. Perbedaannya adalah jika pada kasus klasifikasi, SVM berusaha mencari ‘jalan’ terbesar yang bisa memisahkan sampel-sampel dari kelas berbeda, maka pada kasus regresi SVR berusaha mencari jalan yang dapat menampung sebanyak mungkin sampel di ‘jalan’. Pada pembuatan model ini dilakukan dengan menggunakan modul yang tersedia di library _scikit-learn_ dengan menggunakan beberapa parameter sebagai berikut: 
 
