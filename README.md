@@ -166,7 +166,7 @@ Berikut kelemahan Random Forest:
 * Algoritma Random Forest overfiting untuk beberapa kumpulan data dengan tugas klasifikasi/regresi yang bising/noise.
 * Untuk data yang menyertakan variabel kategorik dengan jumlah level yang berbeda, Random Forest menjadi bias dalam mendukung atribut dengan level yang lebih banyak. Oleh karena itu, skor kepentingan variabel dari Random Forest tidak dapat diandalkan untuk jenis data ini.
 
-Pada proyek ini yang menjadi model dengan solusi terbaik adalah _Support Vector Regression (SVR)_. Dimana model ini memiliki nilai error paling rendah dari kedua model lainnya.
+Pada proyek ini yang menjadi model dengan solusi terbaik adalah _Support Vector Regression (SVR)_. Dimana model ini memiliki nilai error paling rendah dari kedua model lainnya dan hasil prediksinya yang paling mendekati dengan angka sebenarnya.
 
 ## **Evaluation**
 Pada proyek machine learning ini, metrik evaluasi yang digunakan yaitu _mean squared error (MSE)_ yang mana metrik ini merupakan ukuran seberapa dekat garis pas dengan titik data. Untuk setiap titik data, model mengambil jarak secara vertikal dari titik ke nilai y yang sesuai pada kecocokan kurva (kesalahan), dan kuadratkan nilainya.
