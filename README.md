@@ -173,10 +173,10 @@ Pada proyek machine learning ini, metrik evaluasi yang digunakan yaitu _mean squ
 
 <image src='https://raw.githubusercontent.com/ziszz/ethereum-price-predict/master/visualizations/rumus%20MSE.jpg' style='background-color: #FFFFFF;' width=500/>
 
-dimana:
-At = Nilai Aktual permintaan
-Ft = Nilai hasil prediksi
-n = banyaknya data
+dimana:</br>
+At = Nilai Aktual permintaan</br>
+Ft = Nilai hasil prediksi</br>
+n = banyaknya data</br>
 
 Setelah melakukan evaluasi menggunakan metrik _mean squared error_ pada model dengan menggunakan data uji didapatkan hasil seperti berikut:
 
